@@ -19,7 +19,7 @@ import { Switch } from "@/components/ui/switch";
 const taskSchema = z.object({
   title: z.string().min(2, "Title is required"),
   description: z.string().optional(),
-  completed: z.boolean().default(false),
+  completed: z.boolean(),
 });
 
 type TaskFormValues = z.infer<typeof taskSchema>;
